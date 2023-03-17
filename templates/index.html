@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblia+</title>
+
+    <!-- <link href="/MaterialIcons-Regular.ttf" rel="stylesheet"> -->
+    <link href="/static/css/MaterialIcons-Regular.ttf" rel="stylesheet" />
+
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="/static/css/main.css">
+    <link rel="stylesheet" href="/static/css/styles.css">
+
+    <!-- Carga de la biblioteca de Material Design Lite -->
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> -->
+
+    <link rel="stylesheet" href="/static/css/material.indigo-pink.min.css">
+    <!-- <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css"> -->
+
+    <link href="/static/css/material_symbol_outlined.woff2" rel="stylesheet" />
+
+    <script defer src="/static/js/material.min.js"></script>
+
+    <script type="module" src="../static/js/scripts.js"></script>
+
+    <script defer src="/codigos_de_iconos.py"></script>
+    
+
+</head>
+
+<body>
+    <!-- HEADER -->
+    <div class="super-head">
+        <header>
+            <div class="header-container">
+                <!-- Barra de título -->
+                <div>                    
+                    <h1><span class="material-symbols-outlined">{{LIBRO}}</span> Biblia+</h1>                            
+                </div>
+
+
+                <!-- BARRA DE BÚSQUEDA -->
+
+
+                <!-- Botón y Menú desplegable -->
+                <button id="menu-button" class="mdl-button mdl-js-button mdl-button--icon">
+                    <i class="material-symbols-outlined">{{MENU_HAMBURGUESA}}</i>
+                </button>
+                <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="menu-button">
+                    <li class="mdl-menu__item">Opción 1</li>
+                    <li class="mdl-menu__item">Opción 2</li>
+                    <li class="mdl-menu__item">Opción 3</li>
+                </ul>
+
+            </div>
+        </header>
+    </div>
+    <!-- /HEADER -->
+
+
+    <main>
+        <form method="POST">
+            <div>
+                <!-- Crear barra de búsqueda con ícono "ir" -->
+                <!-- <form method="POST"> -->
+                <div class="input-group rounded">
+                    <input title="inputBusqueda" name="inputBusqueda" type="search" class="form-control rounded"
+                        placeholder="Ej: Éxodo 20:8" aria-label="Buscar" aria-describedby="search-addon"
+                        value="{{ request.form['inputBusqueda'] }}">
+                    <div class="input-group-append">
+                        <button class="btn btn-primary rounded" type="submit">
+                            <span class="ir">Ir al versículo</span>
+                        </button>
+                    </div>
+                </div>
+                <!-- </form> -->
+
+
+                <!-- TEXTOS -->
+            </div>
+            <div class="textos">
+                <!-- Versículo -->
+                <div class="contenedorvers">
+                    <div class="versiculo-container">
+                        <span class="material-symbols-outlined quote-icon top-left">{{COMILLAS_DOBLES}}</span>
+                        <p class="versiculo">
+                            {{ tex }}
+                        </p>
+                        <span class="material-symbols-outlined quote-icon bottom-right">{{COMILLAS_DOBLES}}</span>
+                    </div>
+                </div>
+                <!-- Comentario -->
+                <div class="contenedorcoment">
+                    <p class="comentario">{{ coment }}</p>
+                </div>
+            </div>
+        </form>
+    </main>
+
+    <!-- FONDO -->
+    <!-- <div class="container my-5">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-6 text-center">
+          <i class="material-icons icon-book">menu_book</i>
+          <h1 class="mt-4">Biblia+</h1>
+          <p class="mt-5">Biblia con comentarios</p>
+          <button class="btn btn-primary mt-5"  id = "btnVers" onclick="buscarVersiculo('genesis',5,5)">Buscar Versículo</button>
+        </div>
+      </div>
+    </div> -->
+    <!-- /FONDO -->
+
+    <!-- MENÚ INFERIOR -->
+    <nav class="navbar fixed-bottom navbar-dark bg-dark">
+        <div class="container-fluid">
+            <div class="row w-100">
+                <div class="col text-center">
+                    <a title="btn1" class="nav-link" href="#"><i class="material-symbols-outlined">{{HOME}}</i></a>
+                </div>
+                <div class="col text-center">
+                    <a title="btn2" class="nav-link" href="#"><i class="material-symbols-outlined">{{LUPA}}</i></a>
+                </div>
+                <div class="col text-center">
+                    <a title="btn3" class="nav-link" href="#"><i class="material-symbols-outlined">{{FAVORITO}}</i></a>
+                </div>
+                <div class="col text-center">
+                    <a title="btn4" class="nav-link" href="#"><i class="material-symbols-outlined">{{CONFIGURACION}}</i></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <!-- Importar jQuery -->
+    <script src="/static/js/jquery-3.6.0.min.js"></script>
+
+    <!-- Importar Popper.js -->
+    <script src="/static/js/popper.min.js"></script>
+
+    <!-- Importar Bootstrap JS -->
+    <script src="/static/js/bootstrap.bundle.min.js"></script>
+
+
+</body>
+
+</html>

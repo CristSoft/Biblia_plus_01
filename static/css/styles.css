@@ -1,0 +1,92 @@
+/* Estilos para el encabezado */
+header {
+  background-color: #343a40;
+  color: #fff;
+  text-align: center;
+  padding: 4%;
+}
+
+
+header h1 {
+  font-family: "Roboto", sans-serif;
+  font-size: 2rem;
+  /* margin: 10%; */  
+}
+
+.header-container {
+  display: flex;
+  justify-content:space-between;  
+}
+
+.header-container h1 {
+  margin: 0;
+  font-size: 180%;
+  display: flex;
+  align-items: center;
+}
+
+.header-container h1 span {
+  margin-left: 0%;
+}
+
+.mdl-menu__item {
+  color: #fff;
+  background-color: #343a40;
+}
+
+@media (min-width: 768px) {
+  #menu-button {
+    margin-right: 0%;
+    align-items:right;
+  }
+}
+
+
+/* Estilos para el cuerpo de la página */
+body {
+  background-color: #f8f9fa;
+}
+
+
+/* Centro del body */
+.icon-book {
+  font-size: 7rem;
+  color: #3f51b5;
+}
+
+.mt-4 {
+  font-size: 2.5rem;
+  color: #333;
+}
+
+p {
+  font-size: 1.5rem;
+  color: #666;
+}
+
+button {
+  font-size: 1.2rem;
+}
+
+/*BOTONES INFERIORES*/
+.nav-link{
+  padding: 8%;
+  margin-left: 20%;
+  margin-right: 20%;
+  color: #f8f9fa;
+  font-size: 100%;
+}
+
+.nav-link i{
+  font-size: 180%;
+}
+
+.row {
+  display: flex;
+}
+
+.col {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+}
